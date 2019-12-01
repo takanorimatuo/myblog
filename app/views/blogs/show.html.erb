@@ -1,0 +1,44 @@
+<div class ="topic">
+  <div class="content_pos">
+    <div class="more">
+      <ul class="more_list">
+        <li>
+          <%= link_to '編集', "/blogs/#{@blog.id}/edit", method: :get %>
+        </li>
+        <li>
+          <%= link_to '削除', "/blogs/#{@blog.id}", method: :delete %>
+        </li>
+      </ul>
+    </div>
+    <div class="tweet">
+    <h3><%= simple_format(@blog.title) %></h3>
+    <p><%= simple_format(@blog.text) %><p>
+    <span class="user_name">
+      <a href="/users/<%= @blog.user.id %>">
+        <span>投稿者</span><%= @blog.user.name %>
+      </a>
+    </span>
+    </div>
+  </div>
+  <div class="container"> 
+    <% if current_user %>
+      <%= form_for([@blog, @comment], method: :post) do |f| %>
+      <p>コメント入力</p>
+        <%= f.text_area :text, placeholder: "ここにコメントを入力", :size=>"60x10" %>
+        <p></p>
+        <%= f.submit "SEND" %>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="comments">   
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
+</div>

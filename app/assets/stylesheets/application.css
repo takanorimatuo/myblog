@@ -1,0 +1,272 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  
+}
+
+ul {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flash {
+  text-align: center;
+}
+
+.header {
+  height: 250px;
+  width: 100%;
+  background-image: url(https://livedoor.blogimg.jp/kiri_no_mi/imgs/5/2/526964c1.jpg);
+  background-size: cover;
+ 
+}
+
+.header__bar {
+  justify-content: space-between;
+  
+}
+
+.header li {
+  list-style: none;
+}
+
+.header-logo {
+  color: blue;
+  background-color: white;
+  font-family: arial black;
+  margin: 10px 10px;
+  font-size: 60px;
+}
+
+.user_nav {
+  justify-content: space-between;
+}
+
+
+
+.user-name {
+  font-size: 40px;
+  color: gray;
+  width: 200px;
+  height: 80px;
+  background-color: white;
+  text-align: center;
+  display: inline-block;
+  float: center;
+  padding-left: 10px;
+  margin-left: 20px;
+}
+
+.user-name p {
+  font-size: 14px;
+  margin: 1px;
+  color: black;
+
+}
+
+.user__info li{
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: black;
+  border-image: initial;
+  border-radius: 3px;
+  color: white;
+  background-image: url(https://d1f5hsy4d47upe.cloudfront.net/33/3362b09b919cf094469bec0b0984a509_t.jpeg);
+}
+
+.more_list {
+  list-style: none;
+  float: right;
+}
+
+.more_list li {
+  display: inline-block;
+  table-layout: auto;
+}
+
+.new {
+  font-size: 40px;
+  text-align: center;
+  display: block;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(87, 195, 233);
+  border-image: initial;
+  border-radius: 3px;
+  float: right;
+  color: white;
+  background-color: rgb(87, 195, 233);
+  margin-right: 30px;
+}
+
+.topics {
+  background-image: url(https://www.pakutaso.com/shared/img/thumb/ELFADSC08970_TP_V.jpg);
+  background-size: cover;
+  height: 100%;
+}
+
+.topic {
+  text-align: center;
+}
+
+.container p {
+  font-size: 20px;
+}
+
+.content_post {
+  text-align: center;
+}
+
+.content_post h3{
+  font-size: 60px;
+  
+}
+
+.content_post p {
+  font-size: 40px;
+  
+}
+
+
+.comments {
+  
+  float: center;
+  margin-top: 20px;
+  
+}
+
+.contents {
+  text-align: center;
+  
+  
+}
+
+.contents h3 {
+  font-size: 30px;
+  text-align: center;
+  left: 300px;
+}
+
+
+.content_post {
+  text-align: center;
+  
+
+}
+
+.tweet h3 {
+  font-size: 40px;
+}
+.tweet p {
+  font-size:20px;
+  color: white;
+}
+.tweets {
+  font-size: 20px;
+  font-weight: bold;
+  border-width: 1px;
+  border-style: solid;
+  border-color: red;
+  border-image: initial;
+  border-radius: 3px;
+  background-color: white;
+  height: 100px;
+  width: 400px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  list-style: none;
+  font-family: Comic Sans MS;
+  text-align: center;
+}
+
+.name {
+  float: left;
+}
+
+
+
+.log_in {
+  text-align: center;
+  
+}
+
+.form {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgb(87, 195, 233);
+  border-image: initial;
+  border-radius: 1px;
+  background-color: white;
+  height: 400px;
+  width: 400px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-top: 30px;
+}
+
+.create {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgb(87, 195, 233);
+  border-image: initial;
+  border-radius: 3px;
+  background-color: white;
+  height: 500px;
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  margin-top: 30px;
+}
+
+.edit {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgb(87, 195, 233);
+  border-image: initial;
+  border-radius: 3px;
+  background-color: white;
+  height: 500px;
+  width: 400px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  margin-top: 30px;
+}
+
+.mypage {
+  font-size: 40px;
+  font-family: Comic Sans MS;
+  text-align: center;
+}

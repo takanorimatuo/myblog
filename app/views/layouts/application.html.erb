@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myblog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="flash">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    </div>
+    <header class="header">
+      <div class="header__bar">
+        <a class="header-logo" href="/">Myblog</a>
+        <% if user_signed_in? %>
+          <div class="user_nav">
+            <span>
+            <div class="user-name">
+              
+              <p>ログイン名</p>
+              <%= current_user.name %></div>
+              <ul class="user__info">
+                <li>
+                  <a href="/users/<%= current_user.id %>">マイページ</a>
+                </li>
+                <li>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                </li>
+              </ul>
+            </span>
+           <a class="new" href="/blogs/new">投稿する</a>
+          </div>
+        <% else %>
+        <div class="user__info">
+          <li>
+          <%= link_to "ログイン", new_user_session_path, class: 'post' %>
+          </li>
+          <li>
+          <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
+          </li>
+        </div>
+        <% end %>
+      </div>
+    </header>
+    <div class="topics">
+      <div class="topic">
+    <%= yield %>
+      </div>
+    </div>
+  </body>
+</html>

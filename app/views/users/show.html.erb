@@ -1,0 +1,12 @@
+<div class="mypage">
+  <p><%= @name %>さんの投稿一覧</p>
+  <% @blogs.each do |blog| %>
+    <div class="tweets" >
+      <%= simple_format(blog.title) %>
+      <span class="title"><%= blog.text %></span>
+    </div>
+    
+  <% end %>
+  <%= paginate(@blogs) %>
+</div>
+</div>
